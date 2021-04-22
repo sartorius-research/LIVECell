@@ -46,11 +46,11 @@ All images in LIVECell are available following [this link](http://livecell-datas
 
 | Split      | URL   |
 | ---------- |:-----:|
-| 2 \%       | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/0_train2percent.json) |
-| 4 \%       | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/1_train4percent.json)|
-| 5 \%       | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/2_train5percent.json)|
-| 25 \%      | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/3_train25percent.json)|
-| 50 \%      | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/4_train50percent.json)|
+| 2 %       | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/0_train2percent.json) |
+| 4 %       | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/1_train4percent.json)|
+| 5 %       | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/2_train5percent.json)|
+| 25 %      | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/3_train25percent.json)|
+| 50 %      | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/annotations/LIVECell_dataset_size_split/4_train50percent.json)|
 
 
 ### Comparison to fluorescence-based object counts
