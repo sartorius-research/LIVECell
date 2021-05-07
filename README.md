@@ -163,8 +163,28 @@ models/
                  └──<Model>.pth
        
 ```
-Where each `<Model>.pth` is a binary file containing the model weights, `<Base-Config>.yaml` the basic Detectron2-config
-each model training's `config.yaml` inherits and a README explaining how to set up and use  the model.
+
+Where each `<Model>.pth` is a binary file containing the model weights.
+ 
+The config files for each model can be found in the [LIVECell github repo](https://github.com/sartorius-research/LIVECell)
+
+```
+LIVECell
+    ├── Anchor_<free/based>
+            ├── livecell_config.yaml
+            ├── a172_config.yaml
+            ├── bt474_config.yaml
+            ├── bv2_config.yaml
+            ├── huh7_config.yaml
+            ├── mcf7_config.yaml
+            ├── shsy5y_config.yaml
+            ├── skbr3_config.yaml
+            └── skov3_config.yaml
+
+```
+
+Where each config file can be used to reproduce the training done or in combination with our model weights for usage, 
+for more info see the [usage section](model/README.md#Usage).
 
 ### nuclear_count_benchmark/
 The images and fluorescence-based object counts are stored as the label-free images in a zip-archive
