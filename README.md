@@ -165,6 +165,8 @@ models/
 ```
 
 Where each `<Model>.pth` is a binary file containing the model weights.
+
+### configs/
  
 The config files for each model can be found in the [LIVECell github repo](https://github.com/sartorius-research/LIVECell)
 
