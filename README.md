@@ -158,13 +158,10 @@ object detection and instance segmentation. The models require 15 GB of disk spa
 models/
    └── Anchor_<free/based>
             ├── ALL/
-            |    ├── <Model>.pth
-            |    └── config.yaml       
-            ├── <Cell Type>/
-            |    ├── <Model>.pth
-            |    └── config.yaml
-            ├── <Base-Config>.yaml
-            └── README.md            
+            |    └──<Model>.pth
+            └── <Cell Type>/
+                 └──<Model>.pth
+       
 ```
 Where each `<Model>.pth` is a binary file containing the model weights, `<Base-Config>.yaml` the basic Detectron2-config
 each model training's `config.yaml` inherits and a README explaining how to set up and use  the model.

@@ -1,8 +1,21 @@
-# Anchor free model
+# Usage
 
-Each folder contains model and the config file.
+The anchor free models used in this benchmark is based on the [centermask2](https://github.com/youngwanLEE/centermask2#evaluation) architecture and the anchor based models are 
+based on the [detectron2-ResNeSt](https://github.com/chongruo/detectron2-ResNeSt/blob/resnest/GETTING_STARTED.md) architectures, 
+which is both built upon the [detectron2](https://github.com/facebookresearch/detectron2) library.
 
-The anchor free models used in this benchmark is based on the centermask2 architecture which is built upon the detectron2 library.
+The models trained for the LIVECell paper was done so in a distributed fashion on 8 Nvidia V100 GPUS.
+To help others reproduce our results, the training is fully specified in config files found under TODO: (provide real links)
+````
+LIVECell/model/anchor_free/[config_name].yaml
+LIVECell/model/anchor_based/[config_name].yaml
+````
+
+To use our fully trained models download them from our S3 bucket, and use it togheter with appropriate config file as 
+described below in the [traing and evaluation section](#Training and evaluation)
+
+
+# Installation
 
 ## Requirements:
 
@@ -16,7 +29,6 @@ The anchor free models used in this benchmark is based on the centermask2 archit
 Build from source
 ````python
 python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
-(add --user if you don't have permission)
 ````
 
 Or, to install it from a local clone:
@@ -35,7 +47,9 @@ CC=clang CXX=clang++ python -m pip install -e detectron2
 To install a pre-built detectron for different torch and cuda versions and further information, see the detectron2 install document
 https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md
 
-## centermask2
+## Model specific instructions
+
+### Anchor-free (centermask2)
 Retrive the centermask2 code:
 ````python
 git clone https://github.com/youngwanLEE/centermask2.git
@@ -43,6 +57,22 @@ git clone https://github.com/youngwanLEE/centermask2.git
 
 For further information, on installation and usage, see the centermask2 documentation at
 https://github.com/youngwanLEE/centermask2
+
+### Anchor-based (detectron2-ResNeSt)
+Retrive the detectron2-ResNeSt code:
+```sh
+git clone https://github.com/zhanghang1989/detectron2-ResNeSt.git
+```
+For further information, on installation and usage, see the detectron2-ResNeSt documentation at https://github.com/chongruo/detectron2-ResNeSt
+
+
+### Common Installation Issues
+- Not compiled with GPU support" or "Detectron2 CUDA Compiler: not available".
+```sh
+CUDA is not found when building detectron2. You should make sure
+python -c 'import torch; from torch.utils.cpp_extension import CUDA_HOME; print(torch.cuda.is_available(), CUDA_HOME)'
+print valid outputs at the time you build detectron2.
+```
 
 # Training and evaluation
 ### Register LIVECell dataset
@@ -63,22 +93,25 @@ provided config files, for other names, make sure to update your config file acc
 - In the config file change the dataset entries with the name used to register the dataset.
 - Set the output directory in the config file to save the models and results.
 
-### Train a model
+### Train
 To train a model, change the OUTPUT directory in the config file to where the models and checkpoints should be saved.
-Make sure you follow the previous step and register a TRAIN and TEST dataset and run the following code:
+Make sure you follow the previous step and register a TRAIN and TEST dataset, cd into 
+the cloned directory (centermask2 or detectron2-ResNeSt), and run the following code:
 
 ````python
-python tools/train_net.py  --num-gpus 8 --config-file your_config.yaml
+python tools/train_net.py --num-gpus 8  --config-file your_config.yaml
 ````
 To train a model on the dataset defined in *you_config.yaml* with 8 gpus.
  
- ### Evaluate a model
- To evaluate a model, make sure to register a TEST dataset and point to it in your config file and then run the
- following code
+ ### Evaluate
+ To evaluate a model, make sure to register a TEST dataset and point to it in your config file and cd into 
+the cloned directory (centermask2 or detectron2-ResNeSt), 
+then run the following code
  ````python
 python train_net.py  --config-file your_config.yaml --eval-only MODEL.WEIGHTS /path/to/checkpoint_file.pth
 ````
 This will evaluate a model defined in *your_config.yaml* with the weights saved in */path/to/checkpoint_file.pth*
  
-For further details on training, testing and inference, visit:
-https://github.com/youngwanLEE/centermask2#evaluation
+For further details on training, testing and inference, 
+visit the [centermask2](https://github.com/youngwanLEE/centermask2#evaluation) or 
+[detectron2-ResNeSt](https://github.com/chongruo/detectron2-ResNeSt/blob/resnest/GETTING_STARTED.md) docs
