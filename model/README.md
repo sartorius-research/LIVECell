@@ -8,13 +8,13 @@ The models trained for the LIVECell paper was done so in a distributed fashion o
 To help others reproduce our results, we provide pre-trained models and config files.
 
 
-| Architecture    | Dataset | box AP | mask AP | download 
-| ------------ | : ------ : | : ---- : | :----:| :-----: | 
+| Architecture    | Dataset | box AP | mask AP | download | 
+| ------------ |  ------  |  ----  | ---- | ----- | 
 | Anchor_free  | LIVECell | 48.45 | 47.78 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |
-|          | A172 | 31.49 | 34.57 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/a172_config.yaml) / [model]() |  
-|          | BT-474 | 42.12 | 42.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bt474_config.yaml) / [model]() |  
-|          | BV-2 | 42.62 | 45.69 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bv2_config.yaml) / [model]() |  
-|          | Huh7 | 42.44 | 45.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/huh7_config.yaml) / [model]() |  
+|         | A172 | 31.49 | 34.57 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/a172_config.yaml) / [model]() |  
+|         | BT-474 | 42.12 | 42.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bt474_config.yaml) / [model]() |  
+|         | BV-2 | 42.62 | 45.69 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bv2_config.yaml) / [model]() |  
+|         | Huh7 | 42.44 | 45.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/huh7_config.yaml) / [model]() |  
 |          | MCF7 | 36.53 | 37.30 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/mcf7_config.yaml) / [model]() |  
 |          | SH-SY5Y | 25.20 | 23.91 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/shsy5y_config.yaml) / [model]() |  
 |          | SkBr3 | 64.35 | 65.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/skbr3_config.yaml) / [model]() |  
