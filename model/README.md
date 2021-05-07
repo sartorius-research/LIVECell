@@ -7,27 +7,6 @@ which is both built upon the [detectron2](https://github.com/facebookresearch/de
 The models in the LIVECell paper was trained in on 8 Nvidia V100 GPUS.
 To help others reproduce our results and use the models for further research, we provide pre-trained models and config files.
 
-| Architecture    | Dataset | box AP | mask AP | download | 
-| ------------ |  ------  |  ----  | ---- | ----- | 
-<td rowspan="9">Anchor free</td>  | LIVECell | 48.45 | 47.78 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |
-|         | A172 | 31.49 | 34.57 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/a172_config.yaml) / [model]() |  
-|         | BT-474 | 42.12 | 42.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bt474_config.yaml) / [model]() |  
-|         | BV-2 | 42.62 | 45.69 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bv2_config.yaml) / [model]() |  
-|         | Huh7 | 42.44 | 45.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/huh7_config.yaml) / [model]() |  
-|          | MCF7 | 36.53 | 37.30 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/mcf7_config.yaml) / [model]() |  
-|          | SH-SY5Y | 25.20 | 23.91 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/shsy5y_config.yaml) / [model]() |  
-|          | SkBr3 | 64.35 | 65.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/skbr3_config.yaml) / [model]() |  
-|          | SK-OV-3 | 46.43 | 49.39 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |  
-<td rowspan="9">Anchor based</td>| LIVECell | 48.43 | 47.89 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/livecell_config.yaml) / [model]() |  
-|          | A172 | 36.37 | 38.02 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/a172_config.yaml) / [model]() |  
-|          | BT-474 | 43.25 | 43.00 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/bt474_config.yaml) / [model]() |  
-|          | BV-2 | 54.36 | 52.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/bv2_config.yaml) / [model]() |  
-|          | Huh7 | 52.79 | 51.83 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/huh7_config.yaml) / [model]() |  
-|          | MCF7 | 37.53 | 37.94 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/mcf7_config.yaml) / [model]() |  
-|          | SH-SY5Y | 27.87 | 24.92 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/shsy5y_config.yaml) / [model]() |  
-|          | SkBr3 | 64.41 | 65.39 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/skbr3_config.yaml) / [model]() |  
-|          | SK-OV-3 | 53.29 | 54.12 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/skov3_config.yaml) / [model]() |  
-
 <table class="tg">
   <tr>
     <th class="tg-0pky">Architecture</th>
@@ -43,100 +22,110 @@ To help others reproduce our results and use the models for further research, we
     <td class="tg-0pky">47.78</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">A172</td>
+    <td class="tg-0pky">31.49</td>
+    <td class="tg-0pky">34.57</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+   <tr>
+    <td class="tg-0pky">BT-474</td>
+    <td class="tg-0pky">42.12</td>
+    <td class="tg-0pky">42.60</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">BV-2</td>
+    <td class="tg-0pky">42.62</td>
+    <td class="tg-0pky">45.69</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+   <tr>
+    <td class="tg-0pky">Huh7</td>
+    <td class="tg-0pky">42.44</td>
+    <td class="tg-0pky">45.85</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">MCF7</td>
+    <td class="tg-0pky">36.53</td>
+    <td class="tg-0pky">37.30 </td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">SH-SY5Y</td>
+    <td class="tg-0pky">25.20</td>
+    <td class="tg-0pky">23.91</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">SkBr3</td>
+    <td class="tg-0pky">64.35</td>
+    <td class="tg-0pky">65.85</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+  <tr>
+    <td class="tg-0pky">SK-OV-3</td>
+    <td class="tg-0pky">46.43</td>
+    <td class="tg-0pky">49.39</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
   
    <tr>
     <td rowspan="9" class="tg-0pky">Anchor based</td>
     <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+    <td class="tg-0pky">48.43</td>
+    <td class="tg-0pky">47.89</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">A172</td>
+    <td class="tg-0pky">36.37</td>
+    <td class="tg-0pky">38.02</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+   <tr>
+    <td class="tg-0pky">BT-474</td>
+    <td class="tg-0pky">43.25</td>
+    <td class="tg-0pky">43.00</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">BV-2</td>
+    <td class="tg-0pky">54.36</td>
+    <td class="tg-0pky">52.60</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+   <tr>
+    <td class="tg-0pky">Huh7</td>
+    <td class="tg-0pky">52.79</td>
+    <td class="tg-0pky">51.83</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">MCF7</td>
+    <td class="tg-0pky">37.53</td>
+    <td class="tg-0pky">37.94 </td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">SH-SY5Y</td>
+    <td class="tg-0pky">27.87</td>
+    <td class="tg-0pky">24.92</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-    <tr>
-    <td class="tg-0pky">LIVECell</td>
-    <td class="tg-0pky">48.45</td>
-    <td class="tg-0pky">47.78</td>
+  <tr>
+    <td class="tg-0pky">SkBr3</td>
+    <td class="tg-0pky">64.41</td>
+    <td class="tg-0pky">65.39</td>
     <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
   </tr>
-
-
+  <tr>
+    <td class="tg-0pky">SK-OV-3</td>
+    <td class="tg-0pky">53.29</td>
+    <td class="tg-0pky">54.12</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
 </table>
 
 The box and mask AP presented here is derived by training on either the whole LIVECell dataset or a cell 
