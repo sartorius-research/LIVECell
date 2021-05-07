@@ -4,13 +4,13 @@ The anchor free models used in this benchmark is based on the [centermask2](http
 based on the [detectron2-ResNeSt](https://github.com/chongruo/detectron2-ResNeSt/blob/resnest/GETTING_STARTED.md) architectures, 
 which is both built upon the [detectron2](https://github.com/facebookresearch/detectron2) library.
 
-The models trained for the LIVECell paper was done so in a distributed fashion on 8 Nvidia V100 GPUS.
-To help others reproduce our results, we provide pre-trained models and config files.
+The models in the LIVECell paper was trained in on 8 Nvidia V100 GPUS.
+To help others reproduce our results and use the models for further research, we provide pre-trained models and config files.
 
 
 | Architecture    | Dataset | box AP | mask AP | download | 
 | ------------ |  ------  |  ----  | ---- | ----- | 
-| Anchor_free  | LIVECell | 48.45 | 47.78 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |
+| <td rowspan="8">Anchor free</td>  | LIVECell | 48.45 | 47.78 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |
 |         | A172 | 31.49 | 34.57 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/a172_config.yaml) / [model]() |  
 |         | BT-474 | 42.12 | 42.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bt474_config.yaml) / [model]() |  
 |         | BV-2 | 42.62 | 45.69 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bv2_config.yaml) / [model]() |  
@@ -19,7 +19,7 @@ To help others reproduce our results, we provide pre-trained models and config f
 |          | SH-SY5Y | 25.20 | 23.91 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/shsy5y_config.yaml) / [model]() |  
 |          | SkBr3 | 64.35 | 65.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/skbr3_config.yaml) / [model]() |  
 |          | SK-OV-3 | 46.43 | 49.39 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |  
-| Anchor_based | LIVECell | 48.43 | 47.89 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/livecell_config.yaml) / [model]() |  
+| <td rowspan="8">Anchor based</td>| LIVECell | 48.43 | 47.89 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/livecell_config.yaml) / [model]() |  
 |          | A172 | 36.37 | 38.02 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/a172_config.yaml) / [model]() |  
 |          | BT-474 | 43.25 | 43.00 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/bt474_config.yaml) / [model]() |  
 |          | BV-2 | 54.36 | 52.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/bv2_config.yaml) / [model]() |  
@@ -29,10 +29,12 @@ To help others reproduce our results, we provide pre-trained models and config f
 |          | SkBr3 | 64.41 | 65.39 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/skbr3_config.yaml) / [model]() |  
 |          | SK-OV-3 | 53.29 | 54.12 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/skov3_config.yaml) / [model]() |  
 
-
+The box and mask AP presented here is derived by training on either the whole LIVECell dataset or a cell 
+cell specific subset, and then evaluated on the corresponding test dataset.
 
 To use our fully trained models download them from our S3 bucket, and use it togheter with appropriate config file as 
 described below in the [traing and evaluation section](#Training and evaluation)
+
 
 
 # Installation
@@ -64,8 +66,8 @@ CC=clang CXX=clang++ python -m pip install -e detectron2
 ````
 
 
-To install a pre-built detectron for different torch and cuda versions and further information, see the detectron2 install document
-https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md
+To install a pre-built detectron for different torch and cuda versions and further information, 
+see the detectron2 [install document](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md)
 
 ## Model specific instructions
 
