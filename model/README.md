@@ -7,10 +7,9 @@ which is both built upon the [detectron2](https://github.com/facebookresearch/de
 The models in the LIVECell paper was trained in on 8 Nvidia V100 GPUS.
 To help others reproduce our results and use the models for further research, we provide pre-trained models and config files.
 
-
 | Architecture    | Dataset | box AP | mask AP | download | 
 | ------------ |  ------  |  ----  | ---- | ----- | 
-| <td rowspan="8">Anchor free</td>  | LIVECell | 48.45 | 47.78 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |
+<td rowspan="9">Anchor free</td>  | LIVECell | 48.45 | 47.78 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |
 |         | A172 | 31.49 | 34.57 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/a172_config.yaml) / [model]() |  
 |         | BT-474 | 42.12 | 42.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bt474_config.yaml) / [model]() |  
 |         | BV-2 | 42.62 | 45.69 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bv2_config.yaml) / [model]() |  
@@ -19,7 +18,7 @@ To help others reproduce our results and use the models for further research, we
 |          | SH-SY5Y | 25.20 | 23.91 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/shsy5y_config.yaml) / [model]() |  
 |          | SkBr3 | 64.35 | 65.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/skbr3_config.yaml) / [model]() |  
 |          | SK-OV-3 | 46.43 | 49.39 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |  
-| <td rowspan="8">Anchor based</td>| LIVECell | 48.43 | 47.89 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/livecell_config.yaml) / [model]() |  
+<td rowspan="9">Anchor based</td>| LIVECell | 48.43 | 47.89 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/livecell_config.yaml) / [model]() |  
 |          | A172 | 36.37 | 38.02 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/a172_config.yaml) / [model]() |  
 |          | BT-474 | 43.25 | 43.00 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/bt474_config.yaml) / [model]() |  
 |          | BV-2 | 54.36 | 52.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/bv2_config.yaml) / [model]() |  
@@ -28,6 +27,117 @@ To help others reproduce our results and use the models for further research, we
 |          | SH-SY5Y | 27.87 | 24.92 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/shsy5y_config.yaml) / [model]() |  
 |          | SkBr3 | 64.41 | 65.39 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/skbr3_config.yaml) / [model]() |  
 |          | SK-OV-3 | 53.29 | 54.12 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/skov3_config.yaml) / [model]() |  
+
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Architecture</th>
+    <th class="tg-0pky">Dataset</th>
+    <th class="tg-0pky">Box mAP%</th>
+    <th class="tg-0pky">MAsk mAP%</th>
+    <th class="tg-0pky">download</th>
+  </tr>
+  <tr>
+    <td rowspan="9" class="tg-0pky">Anchor free</td>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+  
+   <tr>
+    <td rowspan="9" class="tg-0pky">Anchor based</td>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+    <tr>
+    <td class="tg-0pky">LIVECell</td>
+    <td class="tg-0pky">48.45</td>
+    <td class="tg-0pky">47.78</td>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://s3.us-west-1.wasabisys.com/resnest/detectron/faster_rcnn_R_50_FPN_syncbn_range-scale_1x-fde56e2b.pth ">model </a> 
+  </tr>
+
+
+</table>
 
 The box and mask AP presented here is derived by training on either the whole LIVECell dataset or a cell 
 cell specific subset, and then evaluated on the corresponding test dataset.
