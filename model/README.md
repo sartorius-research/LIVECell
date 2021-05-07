@@ -5,11 +5,31 @@ based on the [detectron2-ResNeSt](https://github.com/chongruo/detectron2-ResNeSt
 which is both built upon the [detectron2](https://github.com/facebookresearch/detectron2) library.
 
 The models trained for the LIVECell paper was done so in a distributed fashion on 8 Nvidia V100 GPUS.
-To help others reproduce our results, the training is fully specified in config files found under TODO: (provide real links)
-````
-LIVECell/model/anchor_free/[config_name].yaml
-LIVECell/model/anchor_based/[config_name].yaml
-````
+To help others reproduce our results, we provide pre-trained models and config files.
+
+
+| Architecture    | Dataset | box AP | mask AP | download 
+| ------------ | : ------ : | : ---- : | :----:| :-----: | 
+| Anchor_free  | LIVECell | 48.45 | 47.78 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |
+|          | A172 | 31.49 | 34.57 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/a172_config.yaml) / [model]() |  
+|          | BT-474 | 42.12 | 42.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bt474_config.yaml) / [model]() |  
+|          | BV-2 | 42.62 | 45.69 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bv2_config.yaml) / [model]() |  
+|          | Huh7 | 42.44 | 45.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/huh7_config.yaml) / [model]() |  
+|          | MCF7 | 36.53 | 37.30 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/mcf7_config.yaml) / [model]() |  
+|          | SH-SY5Y | 25.20 | 23.91 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/shsy5y_config.yaml) / [model]() |  
+|          | SkBr3 | 64.35 | 65.85 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/skbr3_config.yaml) / [model]() |  
+|          | SK-OV-3 | 46.43 | 49.39 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml) / [model]() |  
+| Anchor_based | LIVECell | 48.43 | 47.89 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/livecell_config.yaml) / [model]() |  
+|          | A172 | 36.37 | 38.02 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/a172_config.yaml) / [model]() |  
+|          | BT-474 | 43.25 | 43.00 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/bt474_config.yaml) / [model]() |  
+|          | BV-2 | 54.36 | 52.60 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/bv2_config.yaml) / [model]() |  
+|          | Huh7 | 52.79 | 51.83 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/huh7_config.yaml) / [model]() |  
+|          | MCF7 | 37.53 | 37.94 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/mcf7_config.yaml) / [model]() |  
+|          | SH-SY5Y | 27.87 | 24.92 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/shsy5y_config.yaml) / [model]() |  
+|          | SkBr3 | 64.41 | 65.39 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/skbr3_config.yaml) / [model]() |  
+|          | SK-OV-3 | 53.29 | 54.12 | [config](https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/skov3_config.yaml) / [model]() |  
+
+
 
 To use our fully trained models download them from our S3 bucket, and use it togheter with appropriate config file as 
 described below in the [traing and evaluation section](#Training and evaluation)

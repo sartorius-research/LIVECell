@@ -199,7 +199,6 @@ nuclear_count_benchmark/
     ├── A549.zip
     ├── A549_counts.json 
     └── A549_fluorescent_images.zip
-      
 ```
 
 The json files are on the following format:
