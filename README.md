@@ -170,7 +170,7 @@ The config files for each model can be found in the [LIVECell github repo](https
 
 ```
 LIVECell
-    ├── Anchor_<free/based>
+    └── Anchor_<free/based>
             ├── livecell_config.yaml
             ├── a172_config.yaml
             ├── bt474_config.yaml
