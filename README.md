@@ -160,7 +160,7 @@ models/
             ├── ALL/
             |    └──<Model>.pth
             └── <Cell Type>/
-                 └──<Model>.pth
+                 └──<Model>.pths
        
 ```
 
@@ -182,7 +182,6 @@ LIVECell
             ├── shsy5y_config.yaml
             ├── skbr3_config.yaml
             └── skov3_config.yaml
-
 ```
 
 Where each config file can be used to reproduce the training done or in combination with our model weights for usage, 
