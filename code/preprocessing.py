@@ -34,7 +34,7 @@ def preprocess(input_image, magnification_downsample_factor=1.0):
     x = int(dims[1]*magnification_downsample_factor)
 
     #apply resizing image to account for different magnifications
-    output_image = cv2.resize(output_image, (x,y), interpolation = cv2.INTER_AREA)
+    output_image = cv2.resize(output_image, (x, y), interpolation = cv2.INTER_AREA)
     
     #clip here to regular 0-255 range to avoid any odd median filter results
     output_image[output_image > 255] = 255

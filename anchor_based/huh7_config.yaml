@@ -1,0 +1,78 @@
+MODEL:
+  META_ARCHITECTURE: "GeneralizedRCNN"
+  WEIGHTS: "https://s3.us-west-1.wasabisys.com/resnest/detectron/mask_cascade_rcnn_ResNeSt_200_FPN_dcn_syncBN_all_tricks_3x-e1901134.pth"
+  BACKBONE:
+    NAME: "build_resnet_fpn_backbone"
+    FREEZE_AT: 0
+  MASK_ON: True
+  RESNETS:
+    OUT_FEATURES: ["res2", "res3", "res4", "res5"]
+    DEPTH: 200
+    STRIDE_IN_1X1: False
+    RADIX: 2
+    DEFORM_ON_PER_STAGE: [False, True, True, True] # on Res3,Res4,Res5
+    DEFORM_MODULATED: True
+    DEFORM_NUM_GROUPS: 2
+    NORM: "SyncBN"
+
+  FPN:
+    NORM: "SyncBN"
+    IN_FEATURES: ["res2", "res3", "res4", "res5"]
+  ANCHOR_GENERATOR:
+    SIZES: [[4], [9], [17], [31], [64], [127]]  # One size for each in feature map
+    ASPECT_RATIOS: [[0.25, 0.5, 1.0, 2.0, 4.0]]  # Three aspect ratios (same for all in feature maps)
+  ROI_HEADS:
+    NUM_CLASSES: 1
+    BATCH_SIZE_PER_IMAGE: 512
+    NAME: CascadeROIHeads
+    IN_FEATURES: ["p2", "p3", "p4", "p5"]
+  ROI_BOX_HEAD:
+    NAME: "FastRCNNConvFCHead"
+    NUM_CONV: 4
+    NUM_FC: 1
+    NORM: "SyncBN"
+    POOLER_RESOLUTION: 14
+    CLS_AGNOSTIC_BBOX_REG: True
+  ROI_MASK_HEAD:
+    NUM_CONV: 8
+    NORM: "SyncBN"
+  RPN:
+    IN_FEATURES: ["p2" ,"p2", "p3", "p4", "p5", "p6"]
+    BATCH_SIZE_PER_IMAGE: 256
+    POST_NMS_TOPK_TEST: 3000
+    POST_NMS_TOPK_TRAIN: 3000
+    PRE_NMS_TOPK_TEST: 6000
+    PRE_NMS_TOPK_TRAIN: 12000
+  RETINANET:
+    NUM_CLASSES: 1
+    TOPK_CANDIDATES_TEST: 3000
+  PIXEL_MEAN: [128, 128, 128]
+  PIXEL_STD: [11.578, 11.578, 11.578]
+SOLVER:
+  IMS_PER_BATCH: 16
+  BASE_LR: 0.02
+  STEPS: (17500, 20000)
+  MAX_ITER: 30000
+  CHECKPOINT_PERIOD: 500
+DATASETS:
+  TRAIN: ("TRAIN",)  #REPLACE TRAIN WITH THE REGISTERED NAME 
+  TEST: ("TEST",)    #REPLACE TRAIN WITH THE REGISTERED NAME
+  PRECOMPUTED_PROPOSAL_TOPK_TEST: 1000
+INPUT:
+  MIN_SIZE_TRAIN: (440, 480, 520, 560, 580, 620)
+
+  CROP:
+    ENABLED: False
+  FORMAT: "BGR"
+TEST:
+  DETECTIONS_PER_IMAGE: 3000 # 1000
+  EVAL_PERIOD: 500
+  PRECISE_BN:
+    ENABLED: False
+  AUG:
+    ENABLED: False
+OUTPUT_DIR: "PATH/TO/SAVE/RESULTS" # PATH TO SAVE THE OUTPUT RESULTS
+DATALOADER:
+  NUM_WORKERS: 8
+VERSION: 2
+
