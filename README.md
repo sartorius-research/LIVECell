@@ -59,8 +59,8 @@ images the counts is based on.
 
 | Cell Type    | Images | Counts | Fluorescent images
 | ------------ |:------:|:----------:| :-----: |
-| A549         | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A549.zip) | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A549_counts.json) | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A549_fluorescent_images.zip.zip) 
-| A172         | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A172.zip) | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A172_counts.json) | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A172_fluorescent_images.zip.zip) 
+| A549         | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A549.zip) | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A549_counts.json) | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A549_fluorescent_images.zip) 
+| A172         | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A172.zip) | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A172_counts.json) | [link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/nuclear_count_benchmark/A172_fluorescent_images.zip) 
 
 
 ### Download all of LIVECell

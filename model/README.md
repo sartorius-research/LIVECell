@@ -20,7 +20,7 @@ To help others reproduce our results and use the models for further research, we
     <td class="tg-0pky">LIVECell</td>
     <td class="tg-0pky">48.45</td>
     <td class="tg-0pky">47.78</td>
-    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="https://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/All/LIVECell_anchor_free_model.pth">model </a> 
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/livecell_config.yaml">config</a> | <a href="http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/ALL/LIVECell_anchor_free_model.pth">model </a> 
   </tr>
   <tr>
     <td class="tg-0pky">A172</td>
@@ -32,7 +32,7 @@ To help others reproduce our results and use the models for further research, we
     <td class="tg-0pky">BT-474</td>
     <td class="tg-0pky">42.12</td>
     <td class="tg-0pky">42.60</td>
-    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bt474_config.yaml">config</a> | <a href="https://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/bt474/LIVECell_anchor_free_bt474_model.pth ">model </a> 
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/bt474_config.yaml">config</a> | <a href="https://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/BT474/LIVECell_anchor_free_bt474_model.pth ">model </a> 
   </tr>
   <tr>
     <td class="tg-0pky">BV-2</td>
@@ -56,7 +56,7 @@ To help others reproduce our results and use the models for further research, we
     <td class="tg-0pky">SH-SY5Y</td>
     <td class="tg-0pky">25.20</td>
     <td class="tg-0pky">23.91</td>
-    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/shsy5y_config.yaml">config</a> | <a href="https://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/shsy5y/LIVECell_anchor_free_shsy5y_model.pth">model </a>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_free/shsy5y_config.yaml">config</a> | <a href="https://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/SHSY5Y/LIVECell_anchor_free_shsy5y_model.pth">model </a>
   </tr>
   <tr>
     <td class="tg-0pky">SkBr3</td>
@@ -76,7 +76,7 @@ To help others reproduce our results and use the models for further research, we
     <td class="tg-0pky">LIVECell</td>
     <td class="tg-0pky">48.43</td>
     <td class="tg-0pky">47.89</td>
-    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/livecell_config.yaml">config</a> | <a href="https://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_based/All/LIVECell_anchor_based_model.pth">model </a>
+    <td class="tg-0lax"><a href="https://github.com/sartorius-research/LIVECell/blob/main/model/anchor_based/livecell_config.yaml">config</a> | <a href="https://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_based/ALL/LIVECell_anchor_based_model.pth">model </a>
   </tr>
   <tr>
     <td class="tg-0pky">A172</td>
