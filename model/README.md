@@ -222,15 +222,30 @@ the cloned directory (centermask2 or detectron2-ResNeSt), and run the following 
 python tools/train_net.py --num-gpus 8  --config-file your_config.yaml
 ````
 To train a model on the dataset defined in *you_config.yaml* with 8 gpus.
+
+To fine-tune a model on your own dataset, set MODEL.WEIGTS in the config file to point at one of our weight files,
+if you want to finetune our centermask2 model for instance.
+````python
+MODEL:
+  WEIGHTS: "http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/ALL/LIVECell_anchor_free_model.pth"
+````
  
  ### Evaluate
  To evaluate a model, make sure to register a TEST dataset and point to it in your config file and cd into 
 the cloned directory (centermask2 or detectron2-ResNeSt), 
 then run the following code
  ````python
-python train_net.py  --config-file your_config.yaml --eval-only MODEL.WEIGHTS /path/to/checkpoint_file.pth
+python train_net.py  --config-file <your_config.yaml> --eval-only MODEL.WEIGHTS </path/to/checkpoint_file.pth>
 ````
+
 This will evaluate a model defined in *your_config.yaml* with the weights saved in */path/to/checkpoint_file.pth*
+
+To evaluate one of our models, like the centermask2 (anchor-free), you can point directly at the URI link for the weight 
+file.
+
+ ````python
+python train_net.py  --config-file livecell_config.yaml --eval-only MODEL.WEIGHTS http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/ALL/LIVECell_anchor_free_model.pth
+````
  
 For further details on training, testing and inference, 
 visit the [centermask2](https://github.com/youngwanLEE/centermask2#evaluation) or 
