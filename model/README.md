@@ -12,7 +12,7 @@ To help others reproduce our results and use the models for further research, we
     <th class="tg-0pky">Architecture</th>
     <th class="tg-0pky">Dataset</th>
     <th class="tg-0pky">Box mAP%</th>
-    <th class="tg-0pky">MAsk mAP%</th>
+    <th class="tg-0pky">Mask mAP%</th>
     <th class="tg-0pky">download</th>
   </tr>
   <tr>
