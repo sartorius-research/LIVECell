@@ -253,4 +253,4 @@ visit the [centermask2](https://github.com/youngwanLEE/centermask2#evaluation) o
 
 ## One-shot usage
 For LIVECell experiments with zero-shot learning of EVICAN and Cellpose the input images was preprocessed using the 
-preprocessing-script preprocessing.py found under the [code folder](code/preprocessing.py).
+preprocessing-script preprocessing.py found under the [code folder](../code).
