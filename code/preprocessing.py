@@ -34,7 +34,7 @@ def preprocess(input_image, magnification_downsample_factor=1.0):
     x = int(dims[1]*magnification_downsample_factor)
 
     #apply resizing image to account for different magnifications
-    output_image = cv2.resize(output_image, (x, y), interpolation = cv2.INTER_AREA)
+    output_image = cv2.resize(output_image, (x,y), interpolation = cv2.INTER_AREA)
     
     #clip here to regular 0-255 range to avoid any odd median filter results
     output_image[output_image > 255] = 255
@@ -49,4 +49,12 @@ def preprocess(input_image, magnification_downsample_factor=1.0):
     output_image[output_image < 70] = 70
     output_image = output_image.astype('uint8')
 
+    return output_image
+
+def preprocess_fluorescence(input_image, bInvert=True, magnification_downsample_factor=1.0): 
+    #invert to bring background up to 128
+    img = (255-input_image)/2
+    if not bInvert:
+        img = 255-img
+    output_image = preprocess(img, magnification_downsample_factor=magnification_downsample_factor) 
     return output_image

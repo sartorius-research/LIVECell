@@ -250,3 +250,7 @@ python train_net.py  --config-file livecell_config.yaml --eval-only MODEL.WEIGHT
 For further details on training, testing and inference, 
 visit the [centermask2](https://github.com/youngwanLEE/centermask2#evaluation) or 
 [detectron2-ResNeSt](https://github.com/chongruo/detectron2-ResNeSt/blob/resnest/GETTING_STARTED.md) docs
+
+## One-shot usage
+For LIVECell experiments with zero-shot learning of EVICAN and Cellpose the input images was preprocessed using the 
+preprocessing-script preprocessing.py found under the [code folder](code/preprocessing.py).

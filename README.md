@@ -18,6 +18,7 @@ trained and evaluated on LIVECell.
 ## How to access LIVECell
 
 All images in LIVECell are available following [this link](http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/images.zip)  (requires 1.3 GB). Annotations for the different experiments are linked below.
+To see a more details regarding benchmarks and how to use our models, see [this link](model/README.md).
 
 ### LIVECell-wide train and evaluate
 
