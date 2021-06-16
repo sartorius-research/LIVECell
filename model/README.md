@@ -231,21 +231,30 @@ MODEL:
 ````
  
  ### Evaluate
- To evaluate a model, make sure to register a TEST dataset and point to it in your config file and cd into 
-the cloned directory (centermask2 or detectron2-ResNeSt), 
-then run the following code
+To evaluate a model, make sure to register a TEST dataset and point to it in your config file and cd into 
+the cloned directory (centermask2 or detectron2-ResNeSt), then run the following code
  ````python
 python train_net.py  --config-file <your_config.yaml> --eval-only MODEL.WEIGHTS </path/to/checkpoint_file.pth>
 ````
 
-This will evaluate a model defined in *your_config.yaml* with the weights saved in */path/to/checkpoint_file.pth*
+This will evaluate a model defined in `your_config.yaml` with the weights saved in `/path/to/checkpoint_file.pth`
 
 To evaluate one of our models, like the centermask2 (anchor-free), you can point directly at the URI link for the weight 
 file.
 
+
  ````python
 python train_net.py  --config-file livecell_config.yaml --eval-only MODEL.WEIGHTS http://livecell-dataset.s3.eu-central-1.amazonaws.com/LIVECell_dataset_2021/models/Anchor_free/ALL/LIVECell_anchor_free_model.pth
 ````
+
+#### Evaluation script
+The original evaluation script available in the centermask and detectron2 repo is based on there being no more than 100
+detections in an image. In our case we can have thousands of annotations and thus the AP evaluation will be off. We 
+therefore provide `coco_evaluation.py` evaluation script in the [code](../code) folder. \
+
+To use this script, go into the `train_net.py` file and remove (or comment out) the current import of `COCOEvaluator`.
+Then import `COCOEvaluator` for from the provided `coco_evaluator.py` file instead. This will result in AP evaluation
+supporting for up to 2000 instances in one image.
  
 For further details on training, testing and inference, 
 visit the [centermask2](https://github.com/youngwanLEE/centermask2#evaluation) or 
