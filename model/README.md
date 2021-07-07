@@ -131,13 +131,14 @@ To help others reproduce our results and use the models for further research, we
 The box and mask AP presented here is derived by training on either the whole LIVECell dataset or a cell 
 cell specific subset, and then evaluated on the corresponding test dataset.
 
-To use our fully trained models download them from our S3 bucket, and use it togheter with appropriate config file as 
+To use our fully trained models download them from our S3 bucket, and use it together with appropriate config file as 
 described below in the [traing and evaluation section](#Training and evaluation)
 
 
 
 # Installation
 
+The installation takes approximately 30 minutes 
 ## Requirements:
 
 - Linux or macOS with Python ≥ 3.6
@@ -255,6 +256,74 @@ therefore provide `coco_evaluation.py` evaluation script in the [code](../code) 
 To use this script, go into the `train_net.py` file and remove (or comment out) the current import of `COCOEvaluator`.
 Then import `COCOEvaluator` for from the provided `coco_evaluator.py` file instead. This will result in AP evaluation
 supporting for up to 2000 instances in one image.
+ 
+The evaluation script will take approximately 30 minutes to run on our test dataset with a tesla V100 GPU.
+The output of the evaluation will appear in the terminal, begining with information about the environment, data and 
+architecture used. Then it will start evaluating all the images and summerize the results in the following manner:
+ 
+````python
+.
+.
+.
+[32m[11/18 17:19:06 d2.evaluation.evaluator]: [0mInference done 1557/1564. 0.1733 s / img. ETA=0:00:06
+[32m[11/18 17:19:11 d2.evaluation.evaluator]: [0mInference done 1561/1564. 0.1734 s / img. ETA=0:00:02
+[32m[11/18 17:19:14 d2.evaluation.evaluator]: [0mTotal inference time: 0:22:23.437057 (0.861730 s / img per device, on 1 devices)
+[32m[11/18 17:19:14 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:04:30 (0.173426 s / img per device, on 1 devices)
+Loading and preparing results...
+DONE (t=1.12s)
+creating index...
+index created!
+Size parameters: [[0, 10000000000.0], [0, 324], [324, 961], [961, 10000000000.0]]
+Running per image evaluation...
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished in 119.67 seconds.
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished in 5.86 seconds.
+In method
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=2000 ] = 0.485
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=2000 ] = 0.830
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=2000 ] = 0.504
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=2000 ] = 0.483
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=2000 ] = 0.494
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=2000 ] = 0.507
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.212
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=500 ] = 0.480
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=2000 ] = 0.569
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=2000 ] = 0.531
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=2000 ] = 0.602
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=2000 ] = 0.672
+Loading and preparing results...
+DONE (t=11.04s)
+creating index...
+index created!
+Size parameters: [[0, 10000000000.0], [0, 324], [324, 961], [961, 10000000000.0]]
+Running per image evaluation...
+Evaluate annotation type *segm*
+COCOeval_opt.evaluate() finished in 135.80 seconds.
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished in 5.78 seconds.
+In method
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=2000 ] = 0.478
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=2000 ] = 0.816
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=2000 ] = 0.509
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=2000 ] = 0.451
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=2000 ] = 0.491
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=2000 ] = 0.570
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.210
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=500 ] = 0.470
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=2000 ] = 0.547
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=2000 ] = 0.516
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=2000 ] = 0.565
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=2000 ] = 0.649
+[32m[11/18 17:25:07 d2.engine.defaults]: [0mEvaluation results for cell_phase_test in csv format:
+[32m[11/18 17:25:07 d2.evaluation.testing]: [0mcopypaste: Task: bbox
+[32m[11/18 17:25:07 d2.evaluation.testing]: [0mcopypaste: AP,AP50,AP75,APs,APm,APl
+[32m[11/18 17:25:07 d2.evaluation.testing]: [0mcopypaste: 48.4529,82.9806,50.4426,48.3240,49.4476,50.7434
+[32m[11/18 17:25:07 d2.evaluation.testing]: [0mcopypaste: Task: segm
+[32m[11/18 17:25:07 d2.evaluation.testing]: [0mcopypaste: AP,AP50,AP75,APs,APm,APl
+[32m[11/18 17:25:07 d2.evaluation.testing]: [0mcopypaste: 47.7810,81.6260,50.8958,45.1110,49.0684,56.9874
+
+````
  
 For further details on training, testing and inference, 
 visit the [centermask2](https://github.com/youngwanLEE/centermask2#evaluation) or 
