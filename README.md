@@ -215,3 +215,5 @@ according fluorescent nuclear labels.
 ## LICENSE
 All images, annotations and models associated with LIVECell are published under
 Attribution-NonCommercial 4.0 International ([CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)) license.
+
+All software source code associated associated with LIVECell are published under the MIT License.
