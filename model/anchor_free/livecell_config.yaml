@@ -1,4 +1,3 @@
-_BASE_: "/Base-CenterMask-VoVNet.yaml"
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
   BACKBONE:
