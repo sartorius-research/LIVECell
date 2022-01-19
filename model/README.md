@@ -182,7 +182,7 @@ For further information, on installation and usage, see the [centermask2 documen
 ### Anchor-based (detectron2-ResNeSt)
 Retrive the detectron2-ResNeSt code:
 ```sh
-git clone https://github.com/zhanghang1989/detectron2-ResNeSt.git
+git clone https://github.com/chongruo/detectron2-ResNeSt
 ```
 For further information, on installation and usage, see the [detectron2-ResNeSt documentation](https://github.com/chongruo/detectron2-ResNeSt/blob/resnest/GETTING_STARTED.md)
 
