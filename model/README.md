@@ -138,7 +138,8 @@ described below in the [traing and evaluation section](#Training and evaluation)
 
 # Installation
 
-The installation takes approximately 30 minutes 
+The installation takes approximately 30 minutes, and it is recommended to set up different virtual environments for the anchor-free and the anchor-based model if one wants to use both of them. The anchor-based models uses a modified version of detectron2 with the same name which creates conflicts.
+
 ## Requirements:
 
 - Linux or macOS with Python ≥ 3.6
@@ -146,7 +147,8 @@ The installation takes approximately 30 minutes
 - torchvision that matches the PyTorch installation. You can install them together at pytorch.org to make sure of this.
 - OpenCV, optional, needed by demo and visualization
 - pycocotools: pip install cython; pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
-## detectron2
+
+## Anchor-free model (detectron2 + centermask2)
 
 Build from source
 ````python
@@ -169,9 +171,7 @@ CC=clang CXX=clang++ python -m pip install -e detectron2
 To install a pre-built detectron for different torch and cuda versions and further information, 
 see the detectron2 [install document](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md)
 
-## Model specific instructions
-
-### Anchor-free (centermask2)
+### 
 Retrive the centermask2 code:
 ````python
 git clone https://github.com/youngwanLEE/centermask2.git
@@ -179,10 +179,15 @@ git clone https://github.com/youngwanLEE/centermask2.git
 
 For further information, on installation and usage, see the [centermask2 documentation](https://github.com/youngwanLEE/centermask2#evaluation)
 
-### Anchor-based (detectron2-ResNeSt)
-Retrive the detectron2-ResNeSt code:
+## Anchor-based (detectron2-ResNeSt)
+Do not install detectron2 as outlined above, and if it is installed, uninstall it or create a new virtual environment where it is not installed.
+This is due to the reason that the ResNeSt code has cloned detectron2, made changes to the code and still uses detectron2 as the name which 
+generates conflicts with the original detectron2 code. 
+
+Retrive and install the detectron2-ResNeSt code:
 ```sh
 git clone https://github.com/chongruo/detectron2-ResNeSt
+python -m pip install -e detectron2-ResNeSt
 ```
 For further information, on installation and usage, see the [detectron2-ResNeSt documentation](https://github.com/chongruo/detectron2-ResNeSt/blob/resnest/GETTING_STARTED.md)
 
