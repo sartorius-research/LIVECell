@@ -209,7 +209,7 @@ centermask2 repo:
 https://detectron2.readthedocs.io/en/latest/tutorials/datasets.html
 ````python
 from detectron2.data.datasets import register_coco_instances
-register_coco_instances([dataset_name], {}, [/path/coco/annotations.json], [path/to/image/dir])
+register_coco_instances(dataset_name, {}, /path/coco/annotations.json, path/to/image/dir)
 ````
 
 Were dataset_name will be the name of your dataset and will be how you decide what dataset to use in your config file.
