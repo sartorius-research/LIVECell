@@ -654,7 +654,7 @@ def _evaluate_predictions_on_coco(coco_gt, coco_results, iou_type, kpt_oks_sigma
 
     # IoU threshold | instances | Categories | areas | max dets
     pre_per_iou = [precisions[iou_idx, :, :, 0, -1].mean() for iou_idx in range(precisions.shape[0])]
-    rec_pre_iou = [recalls[iou_idx, :, :, 0, -1].mean() for iou_idx in range(recalls.shape[0])]
+    rec_pre_iou = [recalls[iou_idx, :, 0, -1].mean() for iou_idx in range(recalls.shape[0])]
 
     print(f"Precision and Recall per iou: {coco_eval.params.iouThrs}")
     print(np.round(np.array(pre_per_iou), 4))
