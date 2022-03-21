@@ -256,10 +256,10 @@ python train_net.py  --config-file livecell_config.yaml --eval-only MODEL.WEIGHT
 #### Evaluation script
 The original evaluation script available in the centermask and detectron2 repo is based on there being no more than 100
 detections in an image. In our case we can have thousands of annotations and thus the AP evaluation will be off. We 
-therefore provide `coco_evaluation.py` evaluation script in the [code](../code) folder. \
+therefore provide `coco_evaluation.py` evaluation script in the [code](../code) folder. 
 
 To use this script, go into the `train_net.py` file and remove (or comment out) the current import of `COCOEvaluator`.
-Then import `COCOEvaluator` for from the provided `coco_evaluator.py` file instead. This will result in AP evaluation
+Then import `COCOEvaluator` from the provided `coco_evaluator.py` file instead. This will result in AP evaluation
 supporting for up to 2000 instances in one image.
  
 The evaluation script will take approximately 30 minutes to run on our test dataset with a tesla V100 GPU.
