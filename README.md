@@ -70,27 +70,10 @@ The LIVECell-dataset and trained models is stored in an Amazon Web Services (AWS
 download the dataset if you have an AWS IAM-user using the
 [AWS-CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) in the folder
 you would like to download the dataset to by simply:
-```
-aws s3 sync s3://livecell-dataset .
-```
-
-If you do not have an AWS IAM-user, the procedure is a little bit more involved. We can use `curl` to make an
-HTTP-request to get the S3 XML-response and save to `files.xml`:
 
 ```
-curl -H "GET /?list-type=2 HTTP/1.1" \
-     -H "Host: livecell-dataset.s3.eu-central-1.amazonaws.com" \
-     -H "Date: 20161025T124500Z" \
-     -H "Content-Type: text/plain" http://livecell-dataset.s3.eu-central-1.amazonaws.com/ > files.xml
+aws s3 sync s3://livecell-dataset . --region eu-central-1 --no-sign-request
 ```
-
-We then get the urls from files using `grep`:
-
-```
-grep -oPm1 "(?<=<Key>)[^<]+" files.xml | sed -e 's/^/http:\/\/livecell-dataset.s3.eu-central-1.amazonaws.com\//' > urls.txt
-```
-
-Then download the files you like using `wget`.
 
 ## File structure
 The top-level structure of the files is arranged like:
