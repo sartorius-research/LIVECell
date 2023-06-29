@@ -1,7 +1,6 @@
 # LIVECell dataset
 
-This document contains instructions of how to access the data associated with the submitted
-manuscript "LIVECell - A large-scale dataset for label-free live cell segmentation" by Edlund et. al. 2021.
+This document contains instructions of how to access the data associated with paper [LIVECell—A large-scale dataset for label-free live cell segmentation](https://www.nature.com/articles/s41592-021-01249-6)
 
 ## Background
 Light microscopy is a cheap, accessible, non-invasive modality that when combined with well-established
